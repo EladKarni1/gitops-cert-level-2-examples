@@ -8,4 +8,14 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: docker.io/kostiscodefresh/simple-env-app:2.0          
+        env:
+        - name: UI_THEME
+          value: "light"
+        - name: CACHE_SIZE
+          value: "1024kb"
+        - name: PAGE_LIMIT
+          value: "25"
+        - name: SORTING
+          value: "ascending"    
+        - name: N_BUCKETS
+          value: "24"          
